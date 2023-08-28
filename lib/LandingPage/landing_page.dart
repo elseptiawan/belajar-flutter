@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'MenuCard.dart';
-import '../constants.dart' as Constants;
-import '../DummyUI/HomePage.dart';
+import 'menu_card.dart';
+import '../constants.dart' as constants;
+import '../DummyUI/home_page.dart';
 
 void main() => runApp(const LandingPage());
 
@@ -44,19 +44,19 @@ class LandingPage extends StatelessWidget {
                 },
                 child: const MenuCard(title: "Dummy UI", subtitle: "Practice flutter UI and get familiar with UI Widgets")
               ),
-              const SizedBox(height: Constants.spaceLandingPage),
+              const SizedBox(height: constants.spaceLandingPage),
               const Divider(
                 color: Color(0xFFEBEBEB),
               ),
-              const SizedBox(height: Constants.spaceLandingPage),
+              const SizedBox(height: constants.spaceLandingPage),
               const MenuCard(title: "Simple Calculator", subtitle: "Creating calculator app that consists add, divide, substract, multiply function"),
-              const SizedBox(height: Constants.spaceLandingPage),
+              const SizedBox(height: constants.spaceLandingPage),
               const Divider(
                 color: Color(0xFFEBEBEB),
               ),
-              const SizedBox(height: Constants.spaceLandingPage),
+              const SizedBox(height: constants.spaceLandingPage),
               const MenuCard(title: "Input Validation", subtitle: "Play around with email input & password input"),
-              const SizedBox(height: Constants.spaceLandingPage),
+              const SizedBox(height: constants.spaceLandingPage),
               const Divider(
                 color: Color(0xFFEBEBEB),
               ),

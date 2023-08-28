@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'LandingPage/landingpage.dart';
+import 'LandingPage/landing_page.dart';
 
 void main() {
   runApp(const MyApp());

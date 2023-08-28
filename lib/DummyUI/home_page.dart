@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 // import '../constants.dart' as Constants;
 import 'package:flutter_svg/svg.dart';
-import 'ContainerAndText.dart';
-import 'RowCard.dart';
-import 'ListViewPage.dart';
+import 'container_and_text.dart';
+import 'row_card.dart';
+import 'list_view_page.dart';
 
 void main() => runApp(const HomePage());
 

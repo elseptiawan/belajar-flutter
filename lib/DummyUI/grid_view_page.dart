@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import '../constants.dart' as Constants;
+// import '../constants.dart' as Constants;
 // import 'package:flutter_svg/svg.dart';
-import 'ContainerAndText.dart';
-import 'GridViewPage.dart';
+import 'row_card.dart';
 
-void main() => runApp(const ListViewPage());
+void main() => runApp(const GridViewPage());
 
-class ListViewPage extends StatelessWidget {
-  const ListViewPage({super.key});
+class GridViewPage extends StatelessWidget {
+  const GridViewPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -47,12 +46,26 @@ class ListViewPage extends StatelessWidget {
               flex: 5,
               child: Container(
                 padding: const EdgeInsets.all(10),
+                child: const Text(
+                  "ListView",
+                  style: TextStyle(
+                      color: Color(0xFF898989),
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 5,
+              child: Container(
+                padding: const EdgeInsets.all(10),
                 decoration: const BoxDecoration(
                     border: Border(
                   bottom: BorderSide(width: 5.0, color: Color(0xFF0077B6)),
                 )),
                 child: const Text(
-                  "ListView",
+                  "GridView",
                   style: TextStyle(
                       color: Color(0xFF0077B6),
                       fontSize: 17,
@@ -60,55 +73,30 @@ class ListViewPage extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
-            ),
-            // const Divider(
-            //       color: Color(0xFF0077B6),
-            //     ),
-            Expanded(
-              flex: 5,
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const GridViewPage()),
-                  );
-                },
-                child: Container(
-                  padding: const EdgeInsets.all(10),
-                  child: const Text(
-                    "GridView",
-                    style: TextStyle(
-                        color: Color(0xFF898989),
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ),
             )
           ],
         ),
         const SizedBox(height: 25),
         Expanded(
-          child: ListView(
-            physics: const AlwaysScrollableScrollPhysics(),
-            padding: const EdgeInsets.all(8),
+          child: GridView.count(
+            physics: const ScrollPhysics(),
+            shrinkWrap: true,
+            primary: false,
+            padding: const EdgeInsets.all(30),
+            crossAxisSpacing: 13,
+            mainAxisSpacing: 17,
+            crossAxisCount: 2,
             children: const [
-              ContainerAndText(),
-              SizedBox(height: Constants.heightSpaceListView),
-              ContainerAndText(),
-              SizedBox(height: Constants.heightSpaceListView),
-              ContainerAndText(),
-              SizedBox(height: Constants.heightSpaceListView),
-              ContainerAndText(),
-              SizedBox(height: Constants.heightSpaceListView),
-              ContainerAndText(),
-              SizedBox(height: Constants.heightSpaceListView),
-              ContainerAndText(),
+              RowCard(),
+              RowCard(),
+              RowCard(),
+              RowCard(),
+              RowCard(),
+              RowCard(),
+              RowCard(),
             ],
           ),
-        ),
+        )
       ]),
     );
   }
