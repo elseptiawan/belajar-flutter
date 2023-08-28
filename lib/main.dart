@@ -1098,128 +1098,130 @@ class _GridViewPageState extends State<GridViewPage> {
           ],
         ),
         const SizedBox(height: 25),
-        GridView.count(
-          physics: const ScrollPhysics(),
-          shrinkWrap: true,
-          primary: false,
-          padding: const EdgeInsets.all(30),
-          crossAxisSpacing: 13,
-          mainAxisSpacing: 17,
-          crossAxisCount: 2,
-          children: <Widget>[
-            Container(
-                decoration: BoxDecoration(
-                    border:
-                        Border.all(width: 1, color: const Color(0xFFD9D9D9)),
-                    borderRadius: const BorderRadius.all(Radius.circular(15))),
-                padding: const EdgeInsets.all(24),
-                // color: Colors.teal[200],
-                child: Column(
-                  children: [
-                    SvgPicture.asset('assets/gambar.svg'),
-                    const Text(
-                      "1st Image",
-                      style: TextStyle(fontSize: 14, color: Color(0xFF000000)),
-                    )
-                  ],
-                )),
-            Container(
-                decoration: BoxDecoration(
-                    border:
-                        Border.all(width: 1, color: const Color(0xFFD9D9D9)),
-                    borderRadius: const BorderRadius.all(Radius.circular(15))),
-                padding: const EdgeInsets.all(24),
-                // color: Colors.teal[200],
-                child: Column(
-                  children: [
-                    SvgPicture.asset('assets/gambar.svg'),
-                    const Text(
-                      "1st Image",
-                      style: TextStyle(fontSize: 14, color: Color(0xFF000000)),
-                    )
-                  ],
-                )),
-            Container(
-                decoration: BoxDecoration(
-                    border:
-                        Border.all(width: 1, color: const Color(0xFFD9D9D9)),
-                    borderRadius: const BorderRadius.all(Radius.circular(15))),
-                padding: const EdgeInsets.all(24),
-                // color: Colors.teal[200],
-                child: Column(
-                  children: [
-                    SvgPicture.asset('assets/gambar.svg'),
-                    const Text(
-                      "1st Image",
-                      style: TextStyle(fontSize: 14, color: Color(0xFF000000)),
-                    )
-                  ],
-                )),
-            Container(
-                decoration: BoxDecoration(
-                    border:
-                        Border.all(width: 1, color: const Color(0xFFD9D9D9)),
-                    borderRadius: const BorderRadius.all(Radius.circular(15))),
-                padding: const EdgeInsets.all(24),
-                // color: Colors.teal[200],
-                child: Column(
-                  children: [
-                    SvgPicture.asset('assets/gambar.svg'),
-                    const Text(
-                      "1st Image",
-                      style: TextStyle(fontSize: 14, color: Color(0xFF000000)),
-                    )
-                  ],
-                )),
-            Container(
-                decoration: BoxDecoration(
-                    border:
-                        Border.all(width: 1, color: const Color(0xFFD9D9D9)),
-                    borderRadius: const BorderRadius.all(Radius.circular(15))),
-                padding: const EdgeInsets.all(24),
-                // color: Colors.teal[200],
-                child: Column(
-                  children: [
-                    SvgPicture.asset('assets/gambar.svg'),
-                    const Text(
-                      "1st Image",
-                      style: TextStyle(fontSize: 14, color: Color(0xFF000000)),
-                    )
-                  ],
-                )),
-            Container(
-                decoration: BoxDecoration(
-                    border:
-                        Border.all(width: 1, color: const Color(0xFFD9D9D9)),
-                    borderRadius: const BorderRadius.all(Radius.circular(15))),
-                padding: const EdgeInsets.all(24),
-                // color: Colors.teal[200],
-                child: Column(
-                  children: [
-                    SvgPicture.asset('assets/gambar.svg'),
-                    const Text(
-                      "1st Image",
-                      style: TextStyle(fontSize: 14, color: Color(0xFF000000)),
-                    )
-                  ],
-                )),
-            Container(
-                decoration: BoxDecoration(
-                    border:
-                        Border.all(width: 1, color: const Color(0xFFD9D9D9)),
-                    borderRadius: const BorderRadius.all(Radius.circular(15))),
-                padding: const EdgeInsets.all(24),
-                // color: Colors.teal[200],
-                child: Column(
-                  children: [
-                    SvgPicture.asset('assets/gambar.svg'),
-                    const Text(
-                      "1st Image",
-                      style: TextStyle(fontSize: 14, color: Color(0xFF000000)),
-                    )
-                  ],
-                )),
-          ],
+        Expanded(
+          child: GridView.count(
+            physics: const ScrollPhysics(),
+            shrinkWrap: true,
+            primary: false,
+            padding: const EdgeInsets.all(30),
+            crossAxisSpacing: 13,
+            mainAxisSpacing: 17,
+            crossAxisCount: 2,
+            children: <Widget>[
+              Container(
+                  decoration: BoxDecoration(
+                      border:
+                          Border.all(width: 1, color: const Color(0xFFD9D9D9)),
+                      borderRadius: const BorderRadius.all(Radius.circular(15))),
+                  padding: const EdgeInsets.all(24),
+                  // color: Colors.teal[200],
+                  child: Column(
+                    children: [
+                      SvgPicture.asset('assets/gambar.svg'),
+                      const Text(
+                        "1st Image",
+                        style: TextStyle(fontSize: 14, color: Color(0xFF000000)),
+                      )
+                    ],
+                  )),
+              Container(
+                  decoration: BoxDecoration(
+                      border:
+                          Border.all(width: 1, color: const Color(0xFFD9D9D9)),
+                      borderRadius: const BorderRadius.all(Radius.circular(15))),
+                  padding: const EdgeInsets.all(24),
+                  // color: Colors.teal[200],
+                  child: Column(
+                    children: [
+                      SvgPicture.asset('assets/gambar.svg'),
+                      const Text(
+                        "1st Image",
+                        style: TextStyle(fontSize: 14, color: Color(0xFF000000)),
+                      )
+                    ],
+                  )),
+              Container(
+                  decoration: BoxDecoration(
+                      border:
+                          Border.all(width: 1, color: const Color(0xFFD9D9D9)),
+                      borderRadius: const BorderRadius.all(Radius.circular(15))),
+                  padding: const EdgeInsets.all(24),
+                  // color: Colors.teal[200],
+                  child: Column(
+                    children: [
+                      SvgPicture.asset('assets/gambar.svg'),
+                      const Text(
+                        "1st Image",
+                        style: TextStyle(fontSize: 14, color: Color(0xFF000000)),
+                      )
+                    ],
+                  )),
+              Container(
+                  decoration: BoxDecoration(
+                      border:
+                          Border.all(width: 1, color: const Color(0xFFD9D9D9)),
+                      borderRadius: const BorderRadius.all(Radius.circular(15))),
+                  padding: const EdgeInsets.all(24),
+                  // color: Colors.teal[200],
+                  child: Column(
+                    children: [
+                      SvgPicture.asset('assets/gambar.svg'),
+                      const Text(
+                        "1st Image",
+                        style: TextStyle(fontSize: 14, color: Color(0xFF000000)),
+                      )
+                    ],
+                  )),
+              Container(
+                  decoration: BoxDecoration(
+                      border:
+                          Border.all(width: 1, color: const Color(0xFFD9D9D9)),
+                      borderRadius: const BorderRadius.all(Radius.circular(15))),
+                  padding: const EdgeInsets.all(24),
+                  // color: Colors.teal[200],
+                  child: Column(
+                    children: [
+                      SvgPicture.asset('assets/gambar.svg'),
+                      const Text(
+                        "1st Image",
+                        style: TextStyle(fontSize: 14, color: Color(0xFF000000)),
+                      )
+                    ],
+                  )),
+              Container(
+                  decoration: BoxDecoration(
+                      border:
+                          Border.all(width: 1, color: const Color(0xFFD9D9D9)),
+                      borderRadius: const BorderRadius.all(Radius.circular(15))),
+                  padding: const EdgeInsets.all(24),
+                  // color: Colors.teal[200],
+                  child: Column(
+                    children: [
+                      SvgPicture.asset('assets/gambar.svg'),
+                      const Text(
+                        "1st Image",
+                        style: TextStyle(fontSize: 14, color: Color(0xFF000000)),
+                      )
+                    ],
+                  )),
+              Container(
+                  decoration: BoxDecoration(
+                      border:
+                          Border.all(width: 1, color: const Color(0xFFD9D9D9)),
+                      borderRadius: const BorderRadius.all(Radius.circular(15))),
+                  padding: const EdgeInsets.all(24),
+                  // color: Colors.teal[200],
+                  child: Column(
+                    children: [
+                      SvgPicture.asset('assets/gambar.svg'),
+                      const Text(
+                        "1st Image",
+                        style: TextStyle(fontSize: 14, color: Color(0xFF000000)),
+                      )
+                    ],
+                  )),
+            ],
+          ),
         )
       ]),
     );
