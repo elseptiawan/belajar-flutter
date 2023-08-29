@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'menu_card.dart';
 import '../constants.dart' as constants;
 import '../DummyUI/home_page.dart';
+import '../InputValidation/input_validation.dart';
 
 void main() => runApp(const LandingPage());
 
@@ -35,27 +36,42 @@ class LandingPage extends StatelessWidget {
           child: Column(
             children: [
               GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const HomePage()),
+                    );
+                  },
+                  child: const MenuCard(
+                      headline: "Dummy UI",
+                      subtitle:
+                          "Practice flutter UI and get familiar with UI Widgets")),
+              const SizedBox(height: constants.spaceLandingPage),
+              const Divider(
+                color: Color(0xFFEBEBEB),
+              ),
+              const SizedBox(height: constants.spaceLandingPage),
+              const MenuCard(
+                  headline: "Simple Calculator",
+                  subtitle:
+                      "Creating calculator app that consists add, divide, substract, multiply function"),
+              const SizedBox(height: constants.spaceLandingPage),
+              const Divider(
+                color: Color(0xFFEBEBEB),
+              ),
+              const SizedBox(height: constants.spaceLandingPage),
+              GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const HomePage()),
+                        builder: (context) => const InputValidationPage()),
                   );
                 },
-                child: const MenuCard(title: "Dummy UI", subtitle: "Practice flutter UI and get familiar with UI Widgets")
+                child: const MenuCard(
+                    headline: "Input Validation",
+                    subtitle: "Play around with email input & password input"),
               ),
-              const SizedBox(height: constants.spaceLandingPage),
-              const Divider(
-                color: Color(0xFFEBEBEB),
-              ),
-              const SizedBox(height: constants.spaceLandingPage),
-              const MenuCard(title: "Simple Calculator", subtitle: "Creating calculator app that consists add, divide, substract, multiply function"),
-              const SizedBox(height: constants.spaceLandingPage),
-              const Divider(
-                color: Color(0xFFEBEBEB),
-              ),
-              const SizedBox(height: constants.spaceLandingPage),
-              const MenuCard(title: "Input Validation", subtitle: "Play around with email input & password input"),
               const SizedBox(height: constants.spaceLandingPage),
               const Divider(
                 color: Color(0xFFEBEBEB),

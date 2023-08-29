@@ -4,6 +4,8 @@ import 'package:flutter_svg/svg.dart';
 import 'container_and_text.dart';
 import 'row_card.dart';
 import 'list_view_page.dart';
+import '../Widget/button.dart';
+import '../Widget/input.dart';
 
 void main() => runApp(const HomePage());
 
@@ -27,6 +29,8 @@ class HomePage extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
+        padding:
+            EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
         child: Container(
             padding: const EdgeInsets.all(16),
             child: Column(
@@ -104,25 +108,11 @@ class HomePage extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         fontSize: 16)),
                 const SizedBox(height: 20),
-                Row(
+                const Row(
                   children: [
                     Expanded(
-                      child: ElevatedButton(
-                        onPressed: () => Null,
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(
-                                const Color.fromRGBO(0, 166, 255, 0.094)),
-                            shape: MaterialStateProperty.all<
-                                    RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(7)))),
-                        child: const Text(
-                          "Press Me",
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF0077B6)),
-                        ),
+                      child: MyButton(
+                        textButton: "Press me",
                       ),
                     ),
                   ],
@@ -149,21 +139,12 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 9),
-                TextFormField(
-                    decoration: InputDecoration(
-                        fillColor: const Color.fromRGBO(255, 255, 255, 0.10),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(7),
-                          borderSide: const BorderSide(
-                              color: Color(0xFF0077B6), width: 2.0),
-                        ),
-                        labelText: 'Enter your email...',
-                        prefixIcon: IconButton(
-                            onPressed: () => Null,
-                            icon: const Icon(
-                              Icons.mail,
-                              color: Color(0xFF0077B6),
-                            )))),
+                const MyInput(
+                    textInput: "Enter Your Email...",
+                    icon: Icon(
+                      Icons.mail,
+                      color: Color(0xFF0077B6),
+                    )),
                 const SizedBox(height: 24),
                 const Text("IMAGE ASSET, SIZED BOX & EXPANDED",
                     style: TextStyle(

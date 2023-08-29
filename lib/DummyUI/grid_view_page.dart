@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 // import '../constants.dart' as Constants;
 // import 'package:flutter_svg/svg.dart';
 import 'row_card.dart';
+import 'list_view_page.dart';
 
 void main() => runApp(const GridViewPage());
 
@@ -44,15 +45,24 @@ class GridViewPage extends StatelessWidget {
           children: [
             Expanded(
               flex: 5,
-              child: Container(
-                padding: const EdgeInsets.all(10),
-                child: const Text(
-                  "ListView",
-                  style: TextStyle(
-                      color: Color(0xFF898989),
-                      fontSize: 17,
-                      fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.center,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ListViewPage()),
+                  );
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(10),
+                  child: const Text(
+                    "ListView",
+                    style: TextStyle(
+                        color: Color(0xFF898989),
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ),
             ),

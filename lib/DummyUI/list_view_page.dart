@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../constants.dart' as Constants;
+import '../constants.dart' as constants;
 // import 'package:flutter_svg/svg.dart';
 import 'container_and_text.dart';
 import 'grid_view_page.dart';
@@ -96,15 +96,15 @@ class ListViewPage extends StatelessWidget {
             padding: const EdgeInsets.all(8),
             children: const [
               ContainerAndText(),
-              SizedBox(height: Constants.heightSpaceListView),
+              SizedBox(height: constants.heightSpaceListView),
               ContainerAndText(),
-              SizedBox(height: Constants.heightSpaceListView),
+              SizedBox(height: constants.heightSpaceListView),
               ContainerAndText(),
-              SizedBox(height: Constants.heightSpaceListView),
+              SizedBox(height: constants.heightSpaceListView),
               ContainerAndText(),
-              SizedBox(height: Constants.heightSpaceListView),
+              SizedBox(height: constants.heightSpaceListView),
               ContainerAndText(),
-              SizedBox(height: Constants.heightSpaceListView),
+              SizedBox(height: constants.heightSpaceListView),
               ContainerAndText(),
             ],
           ),
